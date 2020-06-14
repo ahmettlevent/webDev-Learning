@@ -1,0 +1,19 @@
+[
+
+  {
+    "isim": "ahmet",
+    "maas": 5000,
+    "departman": "bilisim"
+  },
+  {
+    "isim": "utku",
+    "maas": 2000,
+    "departman": "guvenlik"
+  },
+  {
+    "isim": "levent",
+    "maas": 15000,
+    "departman": "yazilim"
+  }
+  
+]

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+  <body>
+    <div id="main-div">
+      <textarea
+        name="textarea"
+        id="textarea"
+        cols="50"
+        rows="4"
+        maxlength="1000"
+        placeholder="Lütfen Bir Yazı Giriniz."
+      >Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore dolorum, nostrum illo eligendi esse distinctio.</textarea>
+      <div id="tr-items">
+        <div id="c-image">
+          <img id="country-img" src="" alt="" />
+        </div>
+        <select name="Seçimler" id="selectCountry">
+          <option value="tr">Türkçe</option>
+          <option value="en">İngilizce</option>
+          <option value="fr">Fransızca</option>
+        </select>
+      </div>
+      <div id="result">
+        <span id="result-p"></span>
+      </div>
+    </div>
+
+    <script src="./js/requests.js"></script>
+    <script src="./js/ui.js"></script>
+    <script src="./js/app.js"></script>
+  </body>
+</html>

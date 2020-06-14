@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./static/css/main.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="form-card">
+        <form id="film-form" name="form">
+          <div class="form-row">
+            <div class="form-div row-name">
+              <label for="name">Yönetmen Adı</label>
+              <input type="text" name="name" id="name" />
+            </div>
+            <div class="form-div row-director">
+              <label for="director">Yönetmen</label>
+              <input type="text" name="director" id="director" />
+            </div>
+            <div class="form-div row-link">
+              <label for="link">Film Görsel URL</label>
+              <input type="text" name="link" id="link" />
+            </div>
+          </div>
+          <button id="film-submit" type="submit">Kaydet</button>
+        </form>
+      </div>
+      <div class="film-card">
+        <h3 id="Baslık" style="text-align: center;">Filmler ve Filimler</h3>
+        <table id="film-table">
+          <thead>
+            <tr>
+              <th>FİLM GÖRSELİ</th>
+              <th>FİLM ADI</th>
+              <th>YÖNETMEN</th>
+            </tr>
+          </thead>
+          <tbody id="film-table-body">
+            <tr>
+            </tr>
+          </tbody>
+        </table>
+        <button style="margin-top: 15px;" type="submit">
+          Tüm Filmleri Temizle
+        </button>
+      </div>
+    </div>
+    <script src="./static/js/film.js"></script>
+    <script src="./static/js/storage.js"></script>
+    <script src="./static/js/ui.js"></script>
+    <script src="./static/js/app.js"></script>
+  </body>
+</html>
