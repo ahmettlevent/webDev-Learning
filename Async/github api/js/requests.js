@@ -1,6 +1,6 @@
 class GithubRequest {
   constructor() {
-    this.token = "youTokenHERE"
+    this.token = "yourTokenHERE"
     this.url = "https://api.github.com/users/"
   }
   async get(username) {
