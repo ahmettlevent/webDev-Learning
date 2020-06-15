@@ -3,32 +3,56 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>GitHUB</title>
     <link rel="stylesheet" href="./css/main.css" />
   </head>
   <body>
-    <div id="main-div">
-      <textarea
-        name="textarea"
-        id="textarea"
-        cols="50"
-        rows="4"
-        maxlength="1000"
-        placeholder="Lütfen Bir Yazı Giriniz."
-      >Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore dolorum, nostrum illo eligendi esse distinctio.</textarea>
-      <div id="tr-items">
-        <div id="c-image">
-          <img id="country-img" src="" alt="" />
+    <div id="main-ct">
+      <!-- USER SIDE -->
+      <div id="user-ct">
+        <!-- USER-IMAGE -->
+        <div id="user-img-ct">
+          <img
+            id="user-img"
+            src=""
+            alt=""
+          />
         </div>
-        <select name="Seçimler" id="selectCountry">
-          <option value="tr">Türkçe</option>
-          <option value="en">İngilizce</option>
-          <option value="fr">Fransızca</option>
-        </select>
+
+        <!-- USER NAME -->
+        <div id="user-name-ct">
+          <a href="#" id="user-name">username</a>
+        </div>
+
+        <!-- USER FOLLOW -->
+        <div id="user-followbar-ct">
+          <div id="user-followers">
+            <span>Followers</span><span id="user-followers-count">0</span>
+          </div>
+          <div id="user-following">
+            <span>Following</span><span id="user-following-count">0</span>
+          </div>
+        </div>
+        <!-- USER REPO INFO -->
+        <div id="user-repogist-ct">
+          <div id="user-repo">
+            <span>Repositorys</span><span id="user-repo-count">0</span>
+          </div>
+          <div id="user-gist">
+            <span>Gists</span><span id="user-gist-count">0</span>
+          </div>
+        </div>
+        <!-- ID -->
+        <div id="user-id-ct"><span>ID</span><span id="user-id">15</span></div>
+
+        <!-- NAME INPUT -->
+        <div id="input-username-ct">
+          <label for="input-username">Username</label>
+          <input type="text" name="username" id="input-username" />
+        </div>
       </div>
-      <div id="result">
-        <span id="result-p"></span>
-      </div>
+      <!-- INFO SIDE -->
+      <div id="info-ct"></div>
     </div>
 
     <script src="./js/requests.js"></script>

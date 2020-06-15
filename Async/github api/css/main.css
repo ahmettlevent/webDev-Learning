@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=MuseoModerno:wght@700&display=swap');
+
+* {
+  margin: 0 auto;
+  padding: 0 0;
+  font-family: 'MuseoModerno', serif;
+  box-sizing: border-box;
+}
+
+.color {}
+
+#main-ct {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 75%;
+  margin: 55px auto;
+  height: 25rem;
+  background-color: rgb(5, 33, 109);
+  border-radius: 50px;
+  overflow: hidden;
+}
+
+/*----------------USER----------------*/
+#user-ct {
+  height: 95%;
+  width: 28%;
+  background-color: rgb(255, 255, 255);
+  border: 5px solid rgb(0, 0, 0);
+  border-radius: 50px;
+  overflow: hidden;
+}
+
+/* IMAGE */
+#user-img-ct {
+  background-color: white;
+  border-radius: 100%;
+  border: 2px solid black;
+  height: 6rem;
+  width: 6rem;
+  border-radius: 100%;
+  overflow: hidden;
+}
+
+#user-img {
+  height: 100%;
+}
+
+/* NAME */
+#user-name-ct {
+  border-radius: 25px;
+  width: 60%;
+  text-align: center;
+}
+
+#user-name {
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: black;
+}
+
+/* FOLLOWERS */
+
+#user-followbar-ct {
+  display: flex;
+  margin-top: .3rem;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+#user-followers {
+  width: 35%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(165, 42, 42, .5);
+  border-radius: 6px;
+}
+
+#user-following {
+  width: 35%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(165, 42, 42, .5);
+  border-radius: 6px;
+}
+
+/* REPO INFO */
+
+#user-repogist-ct {
+  display: flex;
+  margin-top: .3rem;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+#user-repo {
+  width: 43%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(165, 42, 42, .5);
+  border-radius: 6px;
+}
+
+#user-gist {
+  width: 43%;
+  display: flex;
+  justify-content: space;
+  align-items: center;
+  background-color: rgba(165, 42, 42, .5);
+  border-radius: 6px;
+}
+
+/* USER ID */
+#user-id-ct {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 5px;
+  width: 55%;
+  background-color: rgba(165, 42, 42, .5);
+  border-radius: 6px;
+
+}
+
+/* INPUT USERNAME */
+#input-username-ct {
+  display: flex;
+  margin-top: 15px;
+  width: 95%;
+  height: 3rem;
+  color: white;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.507);
+  border-radius: 25px;
+}
+
+#input-username {
+  width: 50%;
+  padding: 1% 1%;
+  margin: auto auto;
+  border: none;
+  border-radius: 5px;
+  outline-style: none;
+}
+
+/*----------------INFO----------------*/
+
+#info-ct {
+  height: 95%;
+  width: 65%;
+  background-color: rgb(255, 255, 255);
+  border: 5px solid black;
+  border-radius: 55px;
+  overflow: hidden;
+}
