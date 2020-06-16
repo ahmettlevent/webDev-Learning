@@ -7,8 +7,6 @@
   box-sizing: border-box;
 }
 
-.color {}
-
 #main-ct {
   display: flex;
   flex-direction: row;
@@ -25,7 +23,7 @@
 /*----------------USER----------------*/
 #user-ct {
   height: 95%;
-  width: 28%;
+  width: 40%;
   background-color: rgb(255, 255, 255);
   border: 5px solid rgb(0, 0, 0);
   border-radius: 50px;
@@ -70,7 +68,7 @@
 }
 
 #user-followers {
-  width: 35%;
+  width: 49%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -79,7 +77,7 @@
 }
 
 #user-following {
-  width: 35%;
+  width: 49%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -97,7 +95,7 @@
 }
 
 #user-repo {
-  width: 43%;
+  width: 49%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -106,7 +104,7 @@
 }
 
 #user-gist {
-  width: 43%;
+  width: 49%;
   display: flex;
   justify-content: space;
   align-items: center;
@@ -130,22 +128,28 @@
 /* INPUT USERNAME */
 #input-username-ct {
   display: flex;
-  margin-top: 15px;
-  width: 95%;
-  height: 3rem;
-  color: white;
   align-items: center;
   justify-content: center;
+
+  margin-top: 15px;
+  width: 100%;
+  height: 3rem;
+
+  color: white;
   background-color: rgba(0, 0, 0, 0.507);
-  border-radius: 25px;
+
+  border-radius: 12px;
+}
+
+#label-username {
 }
 
 #input-username {
   width: 50%;
   padding: 1% 1%;
   margin: auto auto;
-  border: none;
   border-radius: 5px;
+  border: none;
   outline-style: none;
 }
 
@@ -153,7 +157,7 @@
 
 #info-ct {
   height: 95%;
-  width: 65%;
+  width: 60%;
   background-color: rgb(255, 255, 255);
   border: 5px solid black;
   border-radius: 55px;
