@@ -1,0 +1,4 @@
+npm init # create npm module
+npm install -g "package-name" # download package to global
+npm install "package-name" # download package to local
+npm install "package-name" --save-dev # download package just for developarea 

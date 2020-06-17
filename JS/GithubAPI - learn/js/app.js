@@ -32,10 +32,16 @@ function eventListeners() {
 // Func's
 function newUserName(e) {
 	let username = input_username.value
-	if ((username).length > 0 && !(unused_words.indexOf(username) >= 0)) {
-		request.get(input_username.value)
-			.then(data => UserToUI(JSON.parse(data)))
-			.catch(err => console.log("yarra yedig"))
+	if (username === "") {
+		console.log("Boş YAPMA!")
+	}
+	else {
+		request.get(username)
+			.then(data => {
+				if (data.message === "Not Found") console.log("Kullanıcı Yok");
+				else UserToUI(data);
+			})
+			.catch(err => console.log("Bir Sorun Oluştu"))
 	}
 
 	e.preventDefault()
