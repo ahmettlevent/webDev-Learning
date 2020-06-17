@@ -1,4 +1,20 @@
+npm root -g # npm global package path
+
 npm init # create npm module
+
 npm install -g "package-name" # download package to global
 npm install "package-name" # download package to local
 npm install "package-name" --save-dev # download package just for developarea 
+
+npm run "shortcut_name" # runs the hardcode commandline like babel's
+
+npm install @babel/core @babel/polyfill @babel/preset-env babel-loader webpack-cli webpack # babel webpack
+
+
+jsonServer 
+
+-Start
+json-server --watch ./fake-api/employees.json
+
+-Install
+npm install -g json-server
