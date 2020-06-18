@@ -5,6 +5,9 @@
       "department": "Bilişim",
       "salary": 5000,
       "id": 1
+    },
+    {
+      "id": 2
     }
   ]
 }
