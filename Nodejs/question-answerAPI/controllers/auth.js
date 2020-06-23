@@ -6,6 +6,7 @@ const { validateUserInput, comparePasswords } = require("../helpers/input/inputH
 const sendEmail = require("../helpers/libraries/sendEmail")
 
 
+// Auth Side
 const register = asyncErrorWrapper(async (req, res, next) => {
 
   const { name, email, password, role } = req.body
@@ -45,36 +46,6 @@ const logout = asyncErrorWrapper(async (req, res, next) => {
     })
 
 });
-
-
-const getUser = (req, res, next) => {
-  res.json({
-    success: true,
-    data: {
-      id: req.user.id,
-      name: req.user.name
-    }
-  })
-}
-
-const imageUpload = asyncErrorWrapper(async (req, res, next) => {
-  if (req.savedProfileImage == null) {
-    return next(new CustomError("You Need to Choose Any File", 400), false)
-  }
-
-  const user = await User.findByIdAndUpdate(req.user.id, {
-    "profile_image": req.savedProfileImage
-  }, {
-    new: true,
-    runValidators: true
-  })
-  res.status(200)
-    .json({
-      success: true,
-      message: 'Image Upload Successfull',
-      data: user
-    })
-})
 
 const forgotPassword = asyncErrorWrapper(async (req, res, next) => {
   const resetEmail = req.body.email;
@@ -150,6 +121,54 @@ const resetpassword = asyncErrorWrapper(async (req, res, next) => {
     .json({ success: true, message: "Reset Password Proccess Successfull" })
 })
 
+// User Side
+
+const getUser = (req, res, next) => {
+  res.json({
+    success: true,
+    data: {
+      id: req.user.id,
+      name: req.user.name
+    }
+  })
+}
+
+const imageUpload = asyncErrorWrapper(async (req, res, next) => {
+  if (req.savedProfileImage == null) {
+    return next(new CustomError("You Need to Choose Any File", 400), false)
+  }
+
+  const user = await User.findByIdAndUpdate(req.user.id, {
+    "profile_image": req.savedProfileImage
+  }, {
+    new: true,
+    runValidators: true
+  })
+  res.status(200)
+    .json({
+      success: true,
+      message: 'Image Upload Successfull',
+      data: user
+    })
+})
+
+const editDetails = asyncErrorWrapper(async (req, res, next) => {
+  const { id } = req.user;
+  const editInformatiob = req.body;
+  const user = await User.findByIdAndUpdate(id, req.body, {
+    new: true,
+    runValidators: true
+  });
+
+  user.save()
+
+  res.status(200).json({
+    success: true,
+    data: user
+  })
+
+})
+
 
 module.exports = {
   register,
@@ -158,5 +177,5 @@ module.exports = {
   logout,
   imageUpload,
   forgotPassword,
-  resetpassword
+  resetpassword, editDetails
 }
