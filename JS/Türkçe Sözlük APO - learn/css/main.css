@@ -1,0 +1,57 @@
+* {
+  margin: 0 0;
+  padding: 0 0;
+  box-sizing: border-box;
+}
+.container {
+  margin: 1.5rem auto;
+  background-color: gray;
+  display: flex;
+  flex-direction: column;
+}
+
+.sozluk-search {
+  display: flex;
+
+  width: 90%;
+  height: 5rem;
+  margin: 15px auto;
+
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+
+  background-color: wheat;
+  border-radius: 50px;
+}
+.sozluk-search span {
+  display: block;
+}
+
+.sozluk-result {
+}
+
+#anlamlar {
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+  align-content: center;
+
+  margin: auto;
+  width: 90%;
+  min-height: 12rem;
+
+  background-color: rgb(119, 72, 72);
+  border-radius: 50px;
+}
+.anlam1 {
+  margin: auto;
+  width: 90%;
+  min-height: 3rem;
+
+  border-radius: 20px;
+  background-color: thistle;
+}
