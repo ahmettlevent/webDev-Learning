@@ -1,0 +1,7 @@
+[
+  {
+    "url": "https://rss.haberler.com/rss.asp?kategori=Category",
+    "method": "GET",
+    "type": "Get's News About Category"
+  }
+]
