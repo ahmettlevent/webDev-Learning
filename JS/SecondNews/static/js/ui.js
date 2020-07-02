@@ -1,30 +1,39 @@
 class UI {
-  async setGuid(quid, element) {
+
+  constructor() {
 
   }
 
 
-  async setDescription(description, element) {
-
-  }
-
-
-  async setTitle(title, element) {
-
-  }
+  newNews(data, result_ul) {
+    result_ul.innerHTML = ""
 
 
-  async setLink(link, element) {
-
-  }
 
 
-  async setEnclosure(enclosure, element) {
+    data.forEach(item => {
+      const li = `
+      <li class="result-list-item">
+        <h2 class="title">
 
-  }
+          <a target="_blank" href="${item.quid}">
+            ${item.title} 
+          </a>
+        
+        </h2>
+        
+          <h4 class="description">
+          ${item.description}
+        </h4>
 
+        <h6 class="pub-date">
+          ${item.pubDate}
+        </h6>
+      </li>`
 
-  async setPubDate(pubDate, element) {
+      result_ul.innerHTML += li
+
+    })
 
   }
 }

@@ -5,7 +5,7 @@ const jwt = require("jsonwebtoken");
 const crypto = require('crypto');
 const { env } = require('process');
 
-const UserSchema = Schema({
+const UserSchema = new Schema({
   name: {
     type: String,
     required: [true, "please provide a name"],

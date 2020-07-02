@@ -1,5 +1,3 @@
-const xml2json = new XmlConverter()
-
 class Requests {
   constructor() {
     this.url = "https://rss.haberler.com/rss.asp?kategori="

@@ -1,6 +1,8 @@
+"user strict";
 const form = document.querySelector("#getnews")
 const input = document.querySelector("#category")
 
+const result_ul = document.querySelector(".result-list")
 // Event Handler
 eventHandler()
 
@@ -28,15 +30,9 @@ function newNews(e) {
 // Helper Funcs
 
 function itemsToUI(data) {
-  data.forEach(item => {
-    ui.setGuid(item.quid)
-    ui.setDescription(item.description)
-    ui.setTitle(item.title)
-    ui.setLink(item.link)
-    ui.setEnclosure(item.enclosure)
-    ui.setPubDate(item.pubDate)
+  console.log(data);
 
-  })
+  ui.newNews(data, result_ul)
 }
 
 function dataParser(data) {
@@ -50,7 +46,6 @@ function dataParser(data) {
       "description": news.querySelector("description").innerHTML,
       "title": news.querySelector("title").innerHTML,
       "link": news.querySelector("link").innerHTML,
-      "enclosure": news.querySelector("enclosure").innerHTML,
       "pubDate": news.querySelector("pubDate").innerHTML
     })
   });
