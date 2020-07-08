@@ -1,0 +1,47 @@
+@import url("https://fonts.googleapis.com/css2?family=MuseoModerno:wght@600&family=Pacifico&display=swap");
+
+html {
+  scroll-behavior: smooth;
+}
+* {
+  margin: 0 0;
+  padding: 0 0;
+  box-sizing: border-box;
+}
+body {
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+  background-color: white;
+}
+button {
+  text-decoration: none;
+  outline: none;
+  border: none;
+}
+h1 {
+  font-size: 2rem;
+  font-weight: 500;
+
+  cursor: default;
+}
+
+a {
+  color: rgba(0, 0, 0, 0.849);
+  text-decoration: none;
+}
+
+.pacifico {
+  font-family: "Pacifico", cursive;
+  font-size: 2rem;
+}
+
+.museo {
+  font-family: "MuseoModerno", cursive;
+}
+
+.medium-blue {
+  /* background-color: rgb(83, 187, 212); */
+  /* background-color: rgb(104, 240, 115); */
+  background-color: rgb(207, 207, 207);
+}

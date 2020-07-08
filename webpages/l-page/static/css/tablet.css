@@ -1,0 +1,18 @@
+.post-1 {
+  background-position: 0px -100px;
+}
+#nav-ul {
+  width: 100%;
+}
+
+/* About */
+#about-us {
+  max-height: 87vh;
+  margin-bottom: 15px;
+}
+
+#about-us p {
+  margin-top: 12px;
+  padding: 5rem 5rem;
+  color: rgba(7, 7, 7, 0.877);
+}
