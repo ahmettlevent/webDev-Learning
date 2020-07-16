@@ -1,0 +1,58 @@
+.container {
+  width: 100%;
+  margin: 0 auto;
+  justify-content: center;
+}
+#usebar-button {
+  display: flex;
+  position: relative;
+  color: white;
+  background-color: black;
+  opacity: 1;
+  transition: opacity 2s;
+}
+.user-bar {
+  opacity: 50;
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  justify-content: space-around;
+  display: none;
+}
+.userbar-list-item {
+  margin: 0 auto;
+}
+.userbar-list-item a {
+  font-family: "Bitter", serif;
+  display: block;
+  background-color: white;
+  text-decoration: none;
+}
+.navbar-list {
+  display: none;
+}
+
+.recommendend-item {
+  margin: 3% 2%;
+  max-width: 27%;
+}
+.ri-image-container {
+  width: 22vw;
+  height: auto;
+}
+.ri-image {
+  opacity: 98%;
+  border: 0.1vw solid rgb(226, 226, 226);
+}
+.ri-name {
+  opacity: 95%;
+  font-size: 0.8rem;
+  text-align: center;
+  line-height: 1rem;
+  margin: 3px 4px;
+}
+.ri-price {
+  opacity: 85%;
+  margin: 8px auto;
+}

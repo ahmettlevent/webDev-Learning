@@ -4,9 +4,9 @@ import {
   Navbar,
   NavbarToggler,
   NavbarBrand,
-  Nav,
+  Nav
 } from 'reactstrap';
-import CartSummary from './CartSummary';
+import CartSummary from '../cart/CartSummary';
 import { Link } from 'react-router-dom';
 
 const Navi = (props) => {
@@ -17,14 +17,12 @@ const Navi = (props) => {
   return (
     <div>
       <Navbar color="light" light expand="md">
-        <NavbarBrand><Link to="/">Northwind App</Link></NavbarBrand>
-        <NavbarBrand><Link to="/form">Form</Link></NavbarBrand>
-        <NavbarBrand><Link to="/form2">Form</Link></NavbarBrand>
-        <NavbarBrand><Link to="/github">GitHub</Link></NavbarBrand>
+        <Link to="/"><h3>Main Page</h3></Link>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
+
           <Nav className="mr-auto" navbar>
-            <CartSummary removeFromCart={props.removeFromCart} cart={props.cart}></CartSummary>
+            <CartSummary></CartSummary>
           </Nav>
         </Collapse>
       </Navbar>

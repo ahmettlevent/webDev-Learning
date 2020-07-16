@@ -1,0 +1,20 @@
+.container {
+  width: 100%;
+}
+
+.recommendend-items {
+  width: 100%;
+  margin: 1% auto;
+}
+.recommendend-item {
+  margin: 3% 2%;
+  max-width: 35%;
+}
+.ri-image-container {
+  width: 38vw;
+  height: auto;
+}
+.ri-image {
+  opacity: 98%;
+  border: 0.1vw solid rgb(226, 226, 226);
+}

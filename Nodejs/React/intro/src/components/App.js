@@ -8,6 +8,9 @@ import CartList from './CartList';
 import { Container, Row, Col } from "reactstrap"
 import Alertify from "alertifyjs"
 import { Switch, Route } from 'react-router-dom';
+import FormDemo from './FormDemo';
+import GithubMost from './GithubMost';
+import FormDemo2 from './FormDemo2';
 
 
 export default class App extends Component {
@@ -45,13 +48,13 @@ export default class App extends Component {
 
     this.setState({ cart: newCart })
 
-    Alertify.success(product.productName + " added to Cart")
+    Alertify.success(product.productName + " added to Cart", 2)
   }
 
   removeFromCart = (product) => {
     let newCart = this.state.cart.filter(c => c.product.id !== product.id)
     this.setState({ cart: newCart })
-    Alertify.notify(product.productName + " removed from Cart", 'error', 5);
+    Alertify.notify(product.productName + " removed from Cart", 'error', 2);
   }
 
   render() {
@@ -61,20 +64,20 @@ export default class App extends Component {
           <Navi removeFromCart={this.removeFromCart} cart={this.state.cart} ></Navi>
 
           <Row>
-            <Col xs="4"><CategoryList currentCategory={this.state.currentCategory} changeCategory={this.changeCategory} /></Col>
-            <Col xs="7">
+            <Col xs="2"><CategoryList currentCategory={this.state.currentCategory} changeCategory={this.changeCategory} /></Col>
+            <Col xs="10">
               <Switch>
 
                 <Route exact path="/" render={props => (
-                  <ProductList {...props} addToCart={this.addToCart} products={this.state.products} currentCategory={this.state.currentCategory} />
-                )} />
+                  <ProductList {...props} addToCart={this.addToCart} products={this.state.products} currentCategory={this.state.currentCategory} />)} />
+
+                <Route exact path="/cart" render={props => (<CartList {...props} cart={this.state.cart} removeFromCart={this.removeFromCart} />)}></Route>
+
+                <Route path="/form" component={FormDemo}></Route>
+                <Route path="/form2" component={FormDemo2}></Route>
 
 
-                <Route exact path="/cart" render={props => (
-                  <CartList {...props} cart={this.state.cart} removeFromCart={this.removeFromCart} />
-                )}>
-
-                </Route>
+                <Route path="/github" component={GithubMost}></Route>
 
                 <Route component={NotFound}></Route>
 

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Learning WEB APP</title>
+    <!-- Fonts Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css"
+    />
+    <!--Global CSS-->
+    <link rel="stylesheet" href="./css/global.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <!--Tablet-->
+    <link rel="stylesheet" media="(max-width:1024px)" href="./css/tablet.css" />
+    <!--Mobile-->
+    <link rel="stylesheet" media="(max-width:768px)" href="./css/mobile.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <nav>
+        <a href="#" class="medium-tag noselect">LEVENT's</a>
+        <div class="list-item-container">
+          <ul class="navbar-list noselect">
+            <li class="navbar-list-item"><a href="#">MAIN PAGE</a></li>
+            <li class="navbar-list-item"><a href="#">ABOUT</a></li>
+            <li class="navbar-list-item">
+              <a href="#" id="product-menu-button">PRODUCTS</a>
+              <div id="products">
+                <ul class="products-list">
+                  <li class="products-list-item"><a href="">WOMEN</a></li>
+                  <li class="products-list-item"><a href="">MEN</a></li>
+                  <li class="products-list-item"><a href="">YOUNG</a></li>
+                  <li class="products-list-item"><a href="">CHILD</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+          <ul class="navbar-list noselect">
+            <li class="navbar-list-item"><a href="#">REGISTER</a></li>
+            <li class="navbar-list-item"><a href="#">LOGIN</a></li>
+          </ul>
+        </div>
+        <div class="list-item-container">
+          <button id="usebar-button">
+            <i class="fas fa-bars"></i>
+            <ul class="user-bar noselect">
+              <li class="userbar-list-item"><a href="/utku">HOME</a></li>
+              <li class="userbar-list-item"><a href="#">NEWS</a></li>
+              <li class="userbar-list-item"><a href="#">REGISTER</a></li>
+              <li class="userbar-list-item"><a href="#">LOGIN</a></li>
+            </ul>
+          </button>
+        </div>
+      </nav>
+      <main>
+        <div class="main-slider">
+          <p>
+            LIFE IS GOOD TOGETHER . . .
+          </p>
+        </div>
+        <div class="content">
+          <div class="recommendend-items">
+            <div class="recommendend-item">
+              <div class="ri-image-container">
+                <img
+                  class="ri-image"
+                  src="https://images-na.ssl-images-amazon.com/images/I/71VozPOpJwL._AC_SY695_.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="attributes">
+                <a class="ri-namelink" href="/urun">
+                  <h1 class="ri-name">
+                    Lorem ipsum dolor sit amet consectetur.
+                  </h1>
+                </a>
+                <a class="ri-shop" href="">ShopName</a>
+                <h5 class="ri-price">75$</h5>
+                <a class="ri-buy" href="#"> BUY</a>
+              </div>
+            </div>
+
+            <div class="recommendend-item">
+              <div class="ri-image-container">
+                <img
+                  class="ri-image"
+                  src="https://images-na.ssl-images-amazon.com/images/I/71VozPOpJwL._AC_SY695_.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="attributes">
+                <a class="ri-namelink" href="/urun">
+                  <h1 class="ri-name">
+                    Lorem ipsum dolor sit amet consectetur.
+                  </h1>
+                </a>
+                <a class="ri-shop" href="">ShopName</a>
+                <h5 class="ri-price">75$</h5>
+                <a class="ri-buy" href="#"> BUY</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script src="./js/app.js"></script>
+  </body>
+</html>

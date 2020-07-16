@@ -7,6 +7,7 @@ class ProductList extends Component {
   render() {
     return (
       <div>
+
         <h3>ProductList  -  {this.props.currentCategory}</h3>
         <Table>
           <thead>
