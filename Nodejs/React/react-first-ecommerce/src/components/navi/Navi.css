@@ -1,0 +1,273 @@
+@media screen and (max-width: 900px) {
+  .searchBox {
+    display: none !important;
+  }
+}
+@media screen and (max-width: 600px) {
+  .userSide {
+    display: none !important;
+  }
+  .mobileMenu {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 1130px) {
+  .categoryBar {
+    display: none !important;
+  }
+}
+
+.navBar {
+  background-color: #ffffff;
+  width: 100vw;
+}
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0px auto;
+  width: 89%;
+  height: 6rem;
+}
+
+/* Header Icon */
+.headerBox {
+  padding: 8px;
+}
+.headerText {
+  text-decoration: none;
+  font-size: 1.8rem;
+  font-weight: 900;
+  letter-spacing: 1px;
+  color: #ff6000;
+}
+
+/* Search Box  */
+.searchBox {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-content: center;
+
+  height: 3rem;
+  border: 2px solid rgb(143, 143, 143);
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.searchIcon {
+  margin: auto;
+
+  font-size: 22px;
+  padding-left: 0.8rem;
+  padding-right: 0.8rem;
+
+  color: rgba(128, 128, 128, 0.479);
+}
+
+.searchInput-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.searchInput {
+  margin: auto;
+  padding: 8px;
+
+  height: 42px;
+  width: 26vw;
+
+  font-size: 0.8rem;
+  font-weight: 900;
+
+  outline: none;
+  border: none;
+}
+.searchInput::placeholder {
+  font-weight: 900;
+  font-size: 0.8rem;
+
+  color: rgba(128, 128, 128, 0.479);
+}
+.searchButton {
+  width: 5rem;
+
+  font-size: 1rem;
+  background-color: rgb(143, 143, 143);
+  color: white;
+
+  border: 2px solid rgb(143, 143, 143);
+  outline: none;
+}
+.searchButton:hover {
+  cursor: pointer;
+}
+
+/* User Side */
+.userSide {
+  display: flex;
+}
+.userBox {
+  margin: auto 8px;
+  height: 3rem;
+  border: 2px solid rgb(143, 143, 143);
+  border-radius: 5px;
+}
+
+/* User Box */
+.accountBox {
+  width: 10rem;
+
+  background-color: white;
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 1rem;
+  align-items: center;
+
+  color: gray;
+}
+
+.userSide-AccountIcon {
+  font-size: 1.4em;
+}
+.userSide-Account {
+  font-size: 0.8em;
+  display: flex;
+  flex-direction: column;
+}
+.myAccount-account {
+  color: rgb(56, 55, 55);
+  font-size: 1.19em;
+}
+.myAccount-account-name {
+  color: rgba(73, 73, 73, 0.795);
+  font-size: 0.85em;
+}
+
+.userSide-DropdownIcon {
+  font-size: 1.2rem;
+}
+/* User Box -> Account Box */
+.userSideAccountBox {
+  display: flex;
+  position: absolute;
+  top: 6rem;
+  width: 12rem;
+  height: 11rem;
+  border-radius: 5px;
+  border: 2px solid rgb(143, 143, 143);
+  background-color: rgba(255, 255, 255, 0.986);
+  animation: opacity 0.3s;
+}
+
+@keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 1;
+  }
+}
+
+.userSideAccountBox ul {
+  display: flex;
+  flex-direction: column;
+
+  margin: auto;
+  width: 80%;
+  height: 90%;
+
+  background-color: white;
+  list-style: none;
+  text-align: left;
+}
+.userSideAccountBox ul li {
+  margin: 2px 9px;
+  font-size: 0.9rem;
+}
+.userSideAccountBox ul li a {
+  text-align: center;
+  text-decoration: none;
+  padding: 0.2rem 0.6rem;
+  color: rgb(92, 92, 92);
+}
+
+/* Cart Box */
+.cartBox {
+  width: 9rem;
+  cursor: pointer;
+  position: relative;
+  color: white;
+  display: flex;
+  justify-content: space-evenly;
+  align-content: center;
+  align-items: center;
+
+  background-color: rgb(143, 143, 143);
+}
+.cartBox-CartIcon {
+  font-size: 1.4rem;
+}
+.cartBox-CountContainer {
+  position: absolute;
+  width: 1.2rem;
+  height: 1.2rem;
+  background-color: white;
+
+  border-radius: 100%;
+  border: 1px solid gray;
+  top: 2px;
+  left: 2rem;
+}
+.cartBox-CartCount {
+  margin: auto;
+  font-size: 0.8rem;
+  color: rgba(128, 128, 128, 0.87);
+}
+
+.cartBox-MyCart {
+  font-size: 0.9rem;
+}
+
+/* Category Bar For Desktop */
+.categoryBar {
+  border-width: 2px;
+  /* border-top: 2px solid gray;
+  border-bottom: 2px solid gray; */
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.527);
+  min-height: 4.1rem;
+  box-shadow: 0px 0px 8px rgba(218, 81, 18, 0.397);
+}
+
+.categories-container {
+  margin: auto;
+  width: 90%;
+}
+
+.categories-container ul {
+  margin: auto;
+
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  list-style: none;
+}
+
+.categories-container ul li {
+  margin: 6px auto;
+}
+
+.categories-container ul li p {
+  border-radius: 5px;
+  color: white;
+  background-color: #ff6000;
+  padding: 1rem;
+  box-shadow: -1px 1px 5px rgba(59, 59, 59, 0.418);
+  transition: background-color 0.1s ease;
+}
+
+.categories-container ul li p:hover {
+  background-color: #ee5d02 !important;
+}

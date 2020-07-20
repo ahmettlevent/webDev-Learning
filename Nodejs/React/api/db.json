@@ -2,10 +2,10 @@
   "products": [
     {
       "id": 1,
-      "categoryId": 2,
+      "categoryId": 3,
       "productName": "Chai",
       "quantityPerUnit": "48 - 6 oz jars",
-      "unitPrice": "24",
+      "unitPrice": "85",
       "unitsInStock": 53
     },
     {
@@ -21,7 +21,7 @@
       "categoryId": 1,
       "productName": "Chef Anton's Cajun Seasoning",
       "quantityPerUnit": "48 - 6 oz jars",
-      "unitPrice": "222",
+      "unitPrice": "27",
       "unitsInStock": 53
     },
     {
@@ -45,7 +45,7 @@
       "categoryId": 7,
       "productName": "Uncle Bob's Organic Dried Pears",
       "quantityPerUnit": "12 - 1 lb pkgs.",
-      "unitPrice": 30,
+      "unitPrice": "32",
       "unitsInStock": 15
     },
     {
@@ -615,6 +615,18 @@
       "quantityPerUnit": "1",
       "unitsInStock": "2",
       "id": 78
+    },
+    {
+      "categoryId": 5,
+      "id": 79
+    },
+    {
+      "categoryId": 2,
+      "productName": "Laptop",
+      "unitPrice": "500",
+      "quantityPerUnit": "25",
+      "unitsInStock": "15",
+      "id": 80
     }
   ],
   "categories": [
