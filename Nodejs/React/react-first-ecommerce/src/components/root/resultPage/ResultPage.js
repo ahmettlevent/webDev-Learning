@@ -4,7 +4,7 @@ import { Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import * as categoryActions from "../../../redux/actions/categoryActions"
-import * as cartActions from "../../../redux/actions/cartActions"
+// import * as cartActions from "../../../redux/actions/cartActions"
 
 
 class ResultPage extends Component {
@@ -41,12 +41,11 @@ class ResultPage extends Component {
   }
 }
 
-
 function mapStateToProps(state) {
   return {
-    currentCategory: state.changeCategoryReducer,
+    // currentCategory: state.changeCategoryReducer,
     categories: state.categoryListReducer,
-    products: state.productListReducer
+    // products: state.productListReducer
 
   }
 }
@@ -57,7 +56,7 @@ function mapDispatchToProps(dispatch) {
     actions: {
       getCategories: bindActionCreators(categoryActions.getCategories, dispatch),
       changeCategory: bindActionCreators(categoryActions.changeCategory, dispatch),
-      addToCart: bindActionCreators(cartActions.addToCart, dispatch)
+      // addToCart: bindActionCreators(cartActions.addToCart, dispatch)
     }
   }
 }

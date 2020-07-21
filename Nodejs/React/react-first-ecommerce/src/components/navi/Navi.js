@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import * as categoryActions from "../../redux/actions/categoryActions"
 import * as productActions from "../../redux/actions/productActions"
+import { removeFromCart } from "../../redux/actions/cartActions"
 
 
 class Navi extends Component {
@@ -107,7 +108,7 @@ class Navi extends Component {
       <div onClick={this.cartBox_handler} className="userBox cartBox">
         <div className="cartBox-CartIcon">
           <div className="cartBox-CountContainer">
-            <p className="cartBox-CartCount" >5</p >
+            <p className="cartBox-CartCount" >{this.props.cart.length}</p >
           </div>
           <i className="fas fa-shopping-cart"></i>
         </div>
@@ -119,19 +120,37 @@ class Navi extends Component {
     )
   }
 
+  colorfulLine() {
+    return (
+      <div className="colorfulLine-container">
+        <div className="colorful colorful-purple"></div>
+        <div className="colorful colorful-blue"></div>
+        <div className="colorful colorful-orange"></div>
+        <div className="colorful colorful-lightOrange"></div>
+        <div className="colorful colorful-darkPurple"></div>
+        <div className="colorful colorful-turquoise"></div>
+
+      </div>
+    )
+  }
+
   categoriesBar() {
     return (
       <div className="categories-container">
         <ul>
           {this.props.categories.map(category => (
             <li key={category.id}>
-              <p onMouseEnter={() => { this.props.actions.changeCategory(category); this.changeProducts(category.id) }}>{category.categoryName}</p>
+              <p onClick={() => { this.props.actions.changeCategory(category); this.changeProducts(category.id) }}>{category.categoryName}</p>
             </li>
           ))}
         </ul>
       </div>
     )
   }
+
+
+
+
   // Render
   render() {
     return (
@@ -152,9 +171,14 @@ class Navi extends Component {
           </div>
         </div>
 
+        <div className="colorfulLine">
+          {this.colorfulLine()}
+        </div>
+
         <div className="categoryBar">
           {this.categoriesBar()}
         </div>
+
       </nav>
     )
   }
@@ -165,6 +189,7 @@ function mapStateToProps(state) {
   return {
     currentCategory: state.changeCategoryReducer,
     categories: state.categoryListReducer,
+    cart: state.cartReducer
   }
 }
 
@@ -174,7 +199,8 @@ function mapDispatchToProps(dispatch) {
     actions: {
       getCategories: bindActionCreators(categoryActions.getCategories, dispatch),
       changeCategory: bindActionCreators(categoryActions.changeCategory, dispatch),
-      getProducts: bindActionCreators(productActions.getProducts, dispatch)
+      getProducts: bindActionCreators(productActions.getProducts, dispatch),
+      removeFromCart: bindActionCreators(removeFromCart, dispatch)
     }
   }
 }

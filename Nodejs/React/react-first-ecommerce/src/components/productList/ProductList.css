@@ -3,20 +3,22 @@
 .productListBar {
   display: flex;
   flex-direction: column;
+  margin: auto;
   margin-top: 1rem;
-  width: 100%;
+  width: 95vw;
   background-color: rgba(255, 255, 255, 0.404);
 }
 
 .productContainer {
   display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
+  flex-direction: row;
+  justify-content: space-around;
   align-items: center;
-  margin: 0.7rem auto;
-  width: 18vw;
-  height: 20rem;
+  margin: 0.3rem auto;
+  width: 95vw;
+  height: 5rem;
   border: 2px solid #ff620096;
   border-radius: 5px;
   background-color: rgba(128, 128, 128, 0.137);
+  transition: display 1s ease;
 }

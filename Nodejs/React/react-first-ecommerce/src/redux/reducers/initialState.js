@@ -1,6 +1,6 @@
 export default {
   cart: [],
   categories: [],
-  currentCategory: { categoryName: "Please Choose A Category" },
+  currentCategory: { categoryName: "Lütfen Bir Kategori Seçin" },
   products: []
 }

@@ -1,9 +1,9 @@
 import * as actionTypes from "./actionTypes"
 
-export function addToCart(cartItem) {
+export function addToCart(product) {
   return {
     type: actionTypes.ADD_TO_CART,
-    payload: cartItem
+    payload: product
   }
 }
 
