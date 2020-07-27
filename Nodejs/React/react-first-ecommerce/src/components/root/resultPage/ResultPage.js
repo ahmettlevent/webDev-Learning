@@ -43,10 +43,7 @@ class ResultPage extends Component {
 
 function mapStateToProps(state) {
   return {
-    // currentCategory: state.changeCategoryReducer,
-    categories: state.categoryListReducer,
-    // products: state.productListReducer
-
+    categories: state.categoryListReducer
   }
 }
 
@@ -54,9 +51,7 @@ function mapStateToProps(state) {
 function mapDispatchToProps(dispatch) {
   return {
     actions: {
-      getCategories: bindActionCreators(categoryActions.getCategories, dispatch),
-      changeCategory: bindActionCreators(categoryActions.changeCategory, dispatch),
-      // addToCart: bindActionCreators(cartActions.addToCart, dispatch)
+      getCategories: bindActionCreators(categoryActions.getCategories, dispatch)
     }
   }
 }

@@ -1,9 +1,9 @@
 import React from 'react';
 import './App.css';
-import Navi from '../../navi/Navi';
 import { Switch, Route } from 'react-router-dom';
 import ResultPage from '../resultPage/ResultPage';
 import ProductList from '../../productList/ProductList';
+import Navi from '../navi/Navi';
 
 function App() {
   return (

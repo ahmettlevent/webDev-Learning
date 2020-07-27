@@ -3,9 +3,10 @@ import "./Navi.css"
 import { Link } from 'react-router-dom'
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import * as categoryActions from "../../redux/actions/categoryActions"
-import * as productActions from "../../redux/actions/productActions"
-import { removeFromCart } from "../../redux/actions/cartActions"
+import * as categoryActions from "../../../redux/actions/categoryActions"
+import * as productActions from "../../../redux/actions/productActions"
+import { removeFromCart } from "../../../redux/actions/cartActions"
+import CategoryBar from '../../toolbox/categoryBar/CategoryBar';
 
 
 class Navi extends Component {
@@ -14,13 +15,8 @@ class Navi extends Component {
     this.state = { cartMenuStatus: false };
   }
 
-  componentDidMount() {
-    this.props.actions.getCategories()
-  }
 
-  changeProducts(category) {
-    this.props.actions.getProducts(category)
-  }
+
 
   // Handler Functions
   accountBox_enter = (event) => {
@@ -134,23 +130,6 @@ class Navi extends Component {
     )
   }
 
-  categoriesBar() {
-    return (
-      <div className="categories-container">
-        <ul>
-          {this.props.categories.map(category => (
-            <li key={category.id}>
-              <p onClick={() => { this.props.actions.changeCategory(category); this.changeProducts(category.id) }}>{category.categoryName}</p>
-            </li>
-          ))}
-        </ul>
-      </div>
-    )
-  }
-
-
-
-
   // Render
   render() {
     return (
@@ -176,7 +155,7 @@ class Navi extends Component {
         </div>
 
         <div className="categoryBar">
-          {this.categoriesBar()}
+          {<CategoryBar></CategoryBar>}
         </div>
 
       </nav>
